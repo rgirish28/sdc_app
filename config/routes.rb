@@ -1,4 +1,40 @@
 SdcApp::Application.routes.draw do
+  get "chapters/new"
+
+  get "chapters/edit"
+
+  get "chapters/show"
+
+  get "chapters/create"
+
+  get "chapters/update"
+
+  get "chapters/destroy"
+
+  get "manuals/new"
+
+  get "manuals/edit"
+
+  get "manuals/create"
+
+  get "manuals/update"
+
+  get "manuals/destroy"
+
+  get "manuals/show"
+
+  get "users/new"
+
+  get "users/show"
+
+  get "users/create"
+
+  get "users/update"
+
+  get "users/destroy"
+
+  get "users/edit"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
