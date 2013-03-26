@@ -8,10 +8,10 @@
 			</ul>
 	</div>
 	<div class = "span9">
+			<%= button_to "New Chapter", new_manual_chapter_path(@manual), :class => "btn btn-primary pull-right", :method => :get %>
 			<h1> SDC Manual</h1>
-			<%= form_for [@manual,@chapter] do |f| %>
-			<%= f.text_area :content, :class => 'ckeditor' %>
-			  <%= f.submit "Submit" %>
+			<% if @chapter.nil? == false%>
+			<%= render :template => "chapters/show",:chapter => @chapter%>
 			<% end %>
 	</div>
 </div>
