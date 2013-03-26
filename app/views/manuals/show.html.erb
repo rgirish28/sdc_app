@@ -1,2 +1,17 @@
-<h1>Manuals#show</h1>
-<p>Find me in app/views/manuals/show.html.erb</p>
+<div class = "container-fluid">
+	<div class = "span3">
+		<h3> Contents</h3>
+			<ul class="nav nav-tabs nav-stacked">
+			<% @manual.chapters.each do |chapter|%>
+			  <li><%= link_to chapter.title, manual_chapter_path(chapter)%></li>
+			<% end %>
+			</ul>
+	</div>
+	<div class = "span9">
+			<h1> SDC Manual</h1>
+			<%= form_for [@manual,@chapter] do |f| %>
+			<%= f.text_area :content, :class => 'ckeditor' %>
+			  <%= f.submit "Submit" %>
+			<% end %>
+	</div>
+</div>

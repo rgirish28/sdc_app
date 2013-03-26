@@ -1,27 +1,11 @@
 SdcApp::Application.routes.draw do
-  get "chapters/new"
+ 
+  root :to => 'welcome#index'
 
-  get "chapters/edit"
-
-  get "chapters/show"
-
-  get "chapters/create"
-
-  get "chapters/update"
-
-  get "chapters/destroy"
-
-  get "manuals/new"
-
-  get "manuals/edit"
-
-  get "manuals/create"
-
-  get "manuals/update"
-
-  get "manuals/destroy"
-
-  get "manuals/show"
+  resource :manual do
+    resources :chapters
+  end
+  
   
   get "users/new"
 
@@ -84,7 +68,7 @@ SdcApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#index'
+ 
 
   # See how all your routes lay out with "rake routes"
 

@@ -15,6 +15,8 @@ class ManualsController < ApplicationController
   end
 
   def show
+    @manual = Manual.find(params[:format])
+    @chapter = Chapter.first
   end
 
 end

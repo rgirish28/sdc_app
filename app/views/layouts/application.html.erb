@@ -7,7 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="navbar navbar-fixed-top">
+		      <div class="navbar-inner">
+		        <div class="container">
+		          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </a>
+		          <%=link_to image_tag("image001.gif", :size =>"60x30"),root_path, :class => "brand pull-left"%>
+				  <%=link_to "Smart Dental Care",root_path, :class => "brand"%>	
+				
+				<div class = "nav-collapse">
+				<ul class ="nav pull-left">
+					<li><%=link_to "SDC Manual",manual_path(Manual.find_by_title("SDC Manual"))%>	
+					<li><a href="/users/sign_up">CQC Dashboard</a></li>
+				</ul>
+				
+					
+				<ul class="nav pull-right">
+					          <li><a href="/users/sign_up">Sign Up</a></li>
+					          <li class="divider-vertical"></li>
+					          <li><a href="/users/sign_up">Sign In</a></li>
 
+					          </li>
+					        </ul>
+							</div>
+
+					        </div>
+					      </div>
+					</div>
 <%= yield %>
 
 </body>
